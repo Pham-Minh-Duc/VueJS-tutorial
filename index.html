@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./script.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="bind">
+            <h2>- Bind tutorial</h2>
+
+        <div v-bind:class = "test">red</div>
+        <div v-bind:style = " {'font-size': size + 'px'}">font-size</div>
+    </div>
+
+    <div id="ifElse">
+        <h2>- If else tutorial</h2>
+        
+        <p v-if="writeStock > 3">in stock</p>
+        <p v-else-if = "writeStock > 0">very few left!</p>
+        <p v-else>not in stock</p>
+
+        <h3>Use The Return Value from a Function</h3>
+        <p v-if="text.includes('pizza')">The text includes the word 'pizza'</p>
+        <p v-else>The word 'pizza' is not found in the text</p>
+    </div>
+
+    <div id="show">
+        <h2>- Show tutorial</h2>
+        <div v-show="showDiv" v-bind:class="fontSize"> this tag can be hidden</div>
+    </div>
+    <div id="loop">
+        <h2>- Loop</h2>
+        <ol>
+            <li v-for="x in foods">{{x}}</li>
+        </ol>
+
+        <img v-for="x in manyFoods" v-bind:src="x">
+    </div>
+</body>
+</html>
